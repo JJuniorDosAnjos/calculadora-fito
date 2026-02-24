@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Calculadora Fitossociológica</title>
+<link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+
+<div class="container">
+
+<h1>🌳 Calculadora Fitossociológica</h1>
+
+<form action="/upload" method="post" enctype="multipart/form-data">
+
+<input type="file" name="file" required>
+
+<button type="submit">
+Calcular Inventário
+</button>
+
+</form>
+
+<p class="info">
+O Excel precisa conter as colunas:<br>
+<b>spp</b> (espécie), <b>parc</b> (parcela) e <b>dap</b> (diâmetro).
+</p>
+
+<div class="footer">
+Sistema de análise fitossociológica em Python
+</div>
+
+</div>
+
+</body>
+</html>
